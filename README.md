@@ -24,7 +24,7 @@ Una vez isntalado tu editor de codigo y NodeJs, puedes verificar la instalacion 
 5. Si todo funcionacorrectamente, se abrira el navegador con el logo de React.
 
 ## Conceptos Utiles
-Al abrir el proyecto en Vscode veran una imagen similar es esta. 
+Al abrir el proyecto en Vscode veran una imagen similar es esta <br>. 
 <img src='./tp1/public/estructura_proyecto.png' width='200px' heigth='300px' alt='estructura de archivos'>
 
 ## Directorios 
