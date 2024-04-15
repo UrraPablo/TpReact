@@ -1,8 +1,7 @@
 import React from 'react'
-
-export const Titulo = () => {
+const Titulo = () => {
   return (
     <h1>Titulo Tp1</h1>
   );
 }
-
+export default Titulo;
