@@ -3,7 +3,7 @@ import React from 'react';
 import Input from '../../components/Input/Input';
 import { useTasks } from '../../components/TaskManager/TaskManager';
 import ListarTareas from '../../components/ListarTareas/ListarTareas';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from 'react-bootstrap';
 
 const Home = () => {
     const { tasks, filteredTasks, addTaskHandler, clearTasksHandler, handleComplete, handleDelete, handleInputChange } = useTasks();
@@ -12,9 +12,8 @@ const Home = () => {
         <div>
             <Input onAddTask={addTaskHandler} onInputChange={handleInputChange} />
             <ListarTareas tasks={filteredTasks} handleComplete={handleComplete} handleDelete={handleDelete} />
-            <button onClick={clearTasksHandler}>Limpiar Tareas</button>
+            <Button className="mt-3"onClick={clearTasksHandler}>Limpiar Tareas</Button>
         </div>
     );
 };
-
 export default Home;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button } from 'react-bootstrap';
 const Input = ({ onAddTask, onInputChange }) => {
     const [inputValue, setInputValue] = useState('');
 
@@ -16,9 +17,9 @@ const Input = ({ onAddTask, onInputChange }) => {
     };
 
     return (
-        <div>
+        <div className='div d-flex justify-content-center'>
             <input type="text" value={inputValue} onChange={handleChange} />
-            <button onClick={handleAddTask}>Agregar Tarea</button>
+            <Button variant="success" size="sm"onClick={handleAddTask}>+</Button>
         </div>
     );
 };
