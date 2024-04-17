@@ -12,23 +12,22 @@ const Tarea = ({ task, onComplete, onDelete }) => {
         onDelete(task);
     };
 
-    return (
+    // Definir el color personalizado para la fila completada
+    const customCompletedColor = '#96f78f'; // Cambia este color según tu preferencia
 
-        <div className="d-flex row border p-1  justify-content-center">
-            <div className="col col-sm-2">
-                <span>{description}</span>
-            </div>
-            <div className="col col-sm-2">
+    // Clase CSS para el fondo personalizado cuando la tarea está completada
+    const rowClass = completed ? 'bg-custom' : '';
+
+    return (
+        <div className={`row p-2 align-items-center ${rowClass}`} style={{ backgroundColor: completed ? customCompletedColor : '' }}>
+            <div className={`col ${completed ? 'text-decoration-line-through' : ''}`} style={{textAlign:"start"}}>{description}</div>
+            <div className="col-auto">
                 {completed ? (
                     <span>Completada</span>
                 ) : (
-                    <div className="d-flex row justify-content-center">
-                        <div className="col col-sm-2">
-                            <Button onClick={handleComplete} variant="success" size="sm">✔</Button>
-                        </div>
-                        <div className="col col-sm-2">
-                            <Button onClick={handleDelete} variant="danger" size="sm">✖</Button>
-                        </div>
+                    <div>
+                        <Button onClick={handleComplete} variant="success" size="sm" className="me-2">✔</Button>
+                        <Button onClick={handleDelete} variant="danger" size="sm">✖</Button>
                     </div>
                 )}
             </div>

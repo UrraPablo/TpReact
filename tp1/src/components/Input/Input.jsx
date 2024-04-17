@@ -17,10 +17,10 @@ const Input = ({ onAddTask, onInputChange }) => {
     };
 
     return (
-        <div className='div d-flex justify-content-center'>
-            <input type="text" value={inputValue} onChange={handleChange} />
-            <Button variant="success" size="sm"onClick={handleAddTask}>+</Button>
-        </div>
+        <div className="d-flex justify-content-center mb-3 align-items-center">
+        <input type="text" className="form-control me-2" value={inputValue} onChange={handleChange} />
+        <Button variant="success" size="sm" onClick={handleAddTask} style={{ height: 'calc(1.5em + 0.75rem + 2px)' }}>Nueva</Button>
+    </div>
     );
 };
 
