@@ -1,10 +1,9 @@
-// Home.jsx
 import React from 'react';
-import Input from '../../components/Input/Input';
-import { useTasks } from '../../components/TaskManager/TaskManager';
-import ListarTareas from '../../components/ListarTareas/ListarTareas';
-import { Button, Card} from 'react-bootstrap';
-import Titulo from "../../components/Titulo/Titulo";
+import { useTasks } from '../../components/TaskManager/TaskManager';//<--Importación del hook useTasks del componente TaskManager
+import Input from '../../components/Input/Input';//<--Importación del componente Input
+import ListarTareas from '../../components/ListarTareas/ListarTareas';//<--Importación del componente ListarTareas
+import { Button, Card} from 'react-bootstrap';//<--Importación del componentes de bootstrap
+import Titulo from "../../components/Titulo/Titulo";//<--Importación del componente Titulo
 
 const Home = () => {
     const { tasks, filteredTasks, addTaskHandler, clearTasksHandler, handleComplete, handleDelete, handleInputChange } = useTasks();
