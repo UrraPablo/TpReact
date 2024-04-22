@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { addTask, getAllTasks, clearTasks, updateTaskCompletion, deleteTask } from '../../util/fileUtils';
 
 export const useTasks = () => {
-    const [tasks, setTasks] = useState([]);
+    const [tasks, setTasks] = useState([]); // estado del obj task. Estado inicial vacio 
     const [filteredTasks, setFilteredTasks] = useState([]);
 
     useEffect(() => {
@@ -21,7 +21,7 @@ export const useTasks = () => {
 
     const addTaskHandler = async (description) => {
         try {
-            const newTask = { description, completed: false };
+            const newTask = { description, completed: false }; // se crea el obj task con sus propiedades
             await addTask(newTask);
             await loadTasks();
         } catch (error) {

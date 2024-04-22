@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
+
 const Input = ({ onAddTask, onInputChange }) => {
     const [inputValue, setInputValue] = useState('');
+
 
     const handleChange = (e) => {
         const value = e.target.value;

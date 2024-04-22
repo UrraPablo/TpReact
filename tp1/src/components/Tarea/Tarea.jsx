@@ -2,10 +2,10 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 
 const Tarea = ({ task, onComplete, onDelete }) => {
-    const { description, completed } = task;
+    const { description, completed } = task; // task: obj  description y completed: propiedades 
 
     const handleComplete = () => {
-        onComplete(task);
+        onComplete(task); // a la funcion onComplete le pasa como argumento el obj task 
     };
 
     const handleDelete = () => {
@@ -21,7 +21,7 @@ const Tarea = ({ task, onComplete, onDelete }) => {
     return (
         <div className={`row p-2 align-items-center ${rowClass}`} style={{ backgroundColor: completed ? customCompletedColor : '' }}>
             <div className={`col ${completed ? 'text-decoration-line-through' : ''}`} style={{textAlign:"start"}}>{description}</div>
-            <div className="col-auto">
+            <div className="col-auto"> 
                 {completed ? (
                     <span>Completada</span>
                 ) : (
