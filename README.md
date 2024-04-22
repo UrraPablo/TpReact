@@ -12,16 +12,17 @@ Aprender el uso de la libreria React en un proyecto.
 ## Herramientas Necesarias 
 1. Editor de codigo (recomenddo Vscode)[Descargar Vscode](https://code.visualstudio.com/download).
 2. npm (Gestor de paquetes NodeJs). Si instalas NodeJs incluye npm. [Descargar NodeJs](https://nodejs.org/en/download).
+3. Una vez instalado npm, debemos instalar las dependencias: En la terminal de **VSCode** debemos ejecutar los comandos **npm i bootstrap** y **npm i react-bootstrap**
 
 # <strong style='color:hsl(240,100%,50%)'>Instalacion React</strong>
-Una vez isntalado tu editor de codigo y NodeJs, puedes verificar la instalacion en la terminal (**Linux**)("npm -v" y "node -v"), o cmd (**Windows**)("npm --version" y "node --version").
+Una vez instalado tu editor de codigo y NodeJs, puedes verificar la instalacion en la terminal (**Linux**)("npm -v" y "node -v"), o cmd (**Windows**)("npm --version" y "node --version").
 
 ### Pasos para la instalacion de React
 1. Abre **Vscode** y su terminal. Crea un directorio con el nombre del proyecto.
 2. Ingresa al directorio creado (cd nombreProyecto) y ejecuta el siguiente comando. **npx create-react-app nombreProyecto**.
 3. Luego de esperara que se instale toda la estructura de archivos, muevete a la carpeta con el nombre del proyecto. 
 4. Ejecuta el comando **npm start**.
-5. Si todo funcionacorrectamente, se abrira el navegador con el logo de React.
+5. Si todo funciona correctamente, se abrira el navegador con el logo de React.
 
 ## Conceptos Utiles
 Al abrir el proyecto en Vscode veran una imagen similar es esta <br>. 

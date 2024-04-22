@@ -1,33 +1,28 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 
-const Tarea = ({ task, onComplete, onDelete }) => {
-    const { description, completed } = task; // task: obj  description y completed: propiedades 
+const Tarea = ({ task, onComplete, onDelete }) => {//<--Se detallan los props recibidos desde Home.jsx (lo que retornará el componente)
+    
+    const {description, completed } = task;//<--Se extraen las propiedades de la tarea
 
     const handleComplete = () => {
-        onComplete(task); // a la funcion onComplete le pasa como argumento el obj task 
+        onComplete(task);//<--Se llama a la función onComplete pasando la tarea como argumento cuando se marca como completada a ListaTareas, detallándola como parametro del prop onComplete, que esta enviará a Home.jsx, y Home.jsx a TaskManager.jsx
     };
 
     const handleDelete = () => {
-        onDelete(task);
+        onDelete(task);//<--Se llama a la función onDelete pasando la tarea a eliminar como argumento a ListaTareas, detallándola como parametro del prop onDelete, que esta enviará a Home.jsx, y Home.jsx a TaskManager.jsx
     };
 
-    // Definir el color personalizado para la fila completada
-    const customCompletedColor = '#96f78f'; // Cambia este color según tu preferencia
-
-    // Clase CSS para el fondo personalizado cuando la tarea está completada
-    const rowClass = completed ? 'bg-custom' : '';
-
     return (
-        <div className={`row p-2 align-items-center ${rowClass}`} style={{ backgroundColor: completed ? customCompletedColor : '' }}>
+        <div className='row p-2 align-items-center' style={{ backgroundColor: completed ? '#96f78f' : '' }/*Si la tarea está completada, tendrá un fondo verde y su texto tachará */}>
             <div className={`col ${completed ? 'text-decoration-line-through' : ''}`} style={{textAlign:"start"}}>{description}</div>
             <div className="col-auto"> 
                 {completed ? (
                     <span>Completada</span>
                 ) : (
                     <div>
-                        <Button onClick={handleComplete} variant="success" size="sm" className="me-2">✔</Button>
-                        <Button onClick={handleDelete} variant="danger" size="sm">✖</Button>
+                        <Button onClick={handleComplete/*<--Al clickear el boton de Completar, se ejecuta la función handleComplete */} variant="success" size="sm" className="me-2">✔</Button>
+                        <Button onClick={handleDelete/*<--Al clickear el boton de Eliminar, se ejecuta la función handleDelete */} variant="danger" size="sm">✖</Button>
                     </div>
                 )}
             </div>
