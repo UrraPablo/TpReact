@@ -20,6 +20,7 @@ import Titulo from "../../components/Titulo/Titulo"; //<--Importación del compo
 //No es un error, solamente creo que les debio llevar mas tiempo del esperado resolverlo de esta manera.
 //Podrian agregar algunas imagenes de como se ve la aplicacion corriendo al readme?
 //Intenten instalar prettier o algun identador automatico para que el codigo quede mas ordenado y facil de leer.
+//Borren el segundo readme que tienen dentro de tp1
 
 const Home = () => {
   const {
